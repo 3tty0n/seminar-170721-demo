@@ -6,6 +6,7 @@ def fib(n):
     else:
         return fib(n - 2) + fib(n - 1)
 
+
 def entry_point(argv):
     """
     entry point into the RPython
@@ -26,10 +27,11 @@ def target(*args):
     """
     return entry_point, None
 
+
 if __name__ == "__main__":
     """
     this block is not executed in RPython
-    because of CPython compatibility
+    inorder to maintain the  compatibility with CPython
     """
     import sys
     entry_point(sys.argv)
